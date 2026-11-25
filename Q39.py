@@ -1,0 +1,17 @@
+num = int(input("Enter a number: "))
+
+# Prime numbers are greater than 1
+if num > 1:
+    is_prime = True
+    # Check for factors from 2 up to num - 1
+    for i in range(2, num):
+        if (num % i) == 0:
+            is_prime = False
+            break
+    
+    if is_prime:
+        print(f"{num} is a prime number.")
+    else:
+        print(f"{num} is not a prime number.")
+else:
+    print(f"{num} is not a prime number.")
